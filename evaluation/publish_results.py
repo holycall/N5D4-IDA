@@ -105,41 +105,42 @@ def main():
     effects = [r["refined"]["bytes"]["f1"] - r["baseline"]["bytes"]["f1"] for r in all_rows]
     extra_tp, extra_fp = [sum(r["refined"]["bytes"][key] - r["baseline"]["bytes"][key] for r in all_rows)
                           for key in ("tp", "fp")]
-    src = ["## 평가 결과", "",
-           f"GNU Coreutils의 stripped ELF **{len(all_rows)}개**에서 Vanilla IDA의 평균 F1은 "
-           f"**{base:.5f}**, N5D4를 적용한 IDA는 **{after:.5f}**였습니다. "
-           f"적용 후 F1이 오른 입력은 {sum(v > 0 for v in effects)}개, 같은 입력은 "
-           f"{effects.count(0)}개, 낮아진 입력은 {sum(v < 0 for v in effects)}개입니다.", "",
-           "### 전체 Coreutils에서 IDA 적용 전후", "",
-           "| 빌드 | 바이너리 수 | Vanilla IDA F1 | IDA + N5D4 F1 | 변화 (100점 환산) |",
+    src = ["## Benchmark results", "",
+           f"Across **{len(all_rows)} stripped GNU Coreutils ELF binaries**, vanilla IDA Pro 9.4 scored "
+           f"**{base:.5f}** mean code-byte F1. With N5D4, it scored **{after:.5f}**. "
+           f"F1 rose on {sum(v > 0 for v in effects)} of the binaries, stayed the same on {effects.count(0)}, "
+           f"and fell on {sum(v < 0 for v in effects)}.", "",
+           "### IDA before and after N5D4 on the full corpus", "",
+           "| Build | Binaries | Vanilla IDA F1 | IDA + N5D4 F1 | Change in F1 (0–100 scale) |",
            "|---|---:|---:|---:|---:|"]
     for name, rows in corpus:
         a, b = (average(rows, method, "f1") for method in ("baseline", "refined"))
         src.append(f"| {name} | {len(rows)} | {a:.5f} | {b:.5f} | {100 * (b - a):+.4f} |")
-    src += ["", f"전체에서 새로 찾은 정답 코드는 **{extra_tp:,}바이트**였고, "
-            f"데이터를 코드로 잘못 분류한 바이트도 **{extra_fp:,}바이트** 늘었습니다. "
-            "각 바이너리의 코드 바이트 F1을 같은 가중치로 평균했습니다. "
-            "실행 가능 영역의 기존 데이터도 후보에 포함했으며 모델 점수 기준은 0.50입니다.", "",
-            "![아키텍처와 컴파일러별 IDA 적용 전후의 평균 F1 변화](evaluation/figures/ida-coreutils-change.png)",
-            "", "### 같은 base64 네 빌드에서 Ghidra와 IDA 비교", "",
-            "같은 파일 네 개를 각 버전에서 직접 열어 측정했습니다. 기본 분석은 코드 바이트, "
-            "NSDA 적용 후는 논문 아티팩트의 4바이트 간격 채점으로 계산했습니다. "
-            "이 네 파일에서 IDA판은 두 채점 방식의 F1이 같았습니다.", "",
-            "| 디스어셈블러 | 기본 평균 F1 | NSDA 적용 후 평균 F1 |",
+    src += ["", f"N5D4 recovered **{extra_tp:,} additional bytes of labeled code** and classified "
+            f"**{extra_fp:,} additional bytes outside the ground-truth code set** as code. "
+            "Each binary has equal weight in the mean. The benchmark used a score threshold of 0.50 "
+            "and included defined data in executable segments.", "",
+            "![Change in mean IDA F1 by architecture and compiler](evaluation/figures/ida-coreutils-change.png)",
+            "", "### IDA and Ghidra on the same four base64 builds", "",
+            "Each version analyzed the same four files. Baseline F1 counts code bytes. The NSDA column "
+            "uses the authors’ scorer, which samples blocks at four-byte intervals. Both scoring methods "
+            "gave the same F1 for the IDA port on these four inputs.", "",
+            "| Disassembler | Baseline mean F1 | Mean F1 with NSDA |",
             "|---|---:|---:|"]
     for name, first, second in versions:
         src.append(f"| {name} | {first:.5f} | {second:.5f} |")
     _, gh_base, gh_after = versions[-1]
     best = max((score, name, stage) for name, vanilla, nsda in versions
-               for stage, score in (("기본 분석", vanilla), ("NSDA 적용", nsda)))
-    src += ["", f"Ghidra 12.2에서 저자 구현은 평균 F1을 100점 환산 **{100 * (gh_after - gh_base):.2f}점** 높였습니다. "
-            f"같은 네 파일에서 가장 높은 평균 F1은 {best[1]}의 {best[2]}으로 얻은 {best[0]:.5f}였습니다.",
-            "", "![Ghidra 세 버전과 IDA Pro의 기본 및 NSDA 적용 후 F1 비교](evaluation/figures/base64-version-comparison.png)",
-            "", "Ghidra 12.2와 IDA 9.4의 버전별 직접 비교 범위는 위 네 빌드입니다. "
-            "논문 표 4·9와의 대조, 정밀도·재현율, 오류 바이트 수 및 재현 명령은 "
-            "[전체 평가 보고서](evaluation/REPORT.md)에 있습니다. "
-            "[저자 평가 코드](https://github.com/gdjs2/NSDA) · "
-            "[Coreutils 데이터셋](https://github.com/gdjs2/NSDA-coreutils-dataset)"]
+               for stage, score in (("baseline", vanilla), ("with NSDA", nsda)))
+    src += ["", f"On Ghidra 12.2, the authors’ implementation raised mean F1 by "
+            f"**{100 * (gh_after - gh_base):.2f} points** on the 0–100 scale. "
+            f"The highest mean F1 on these four files was {best[0]:.5f} ({best[1]}, {best[2]}).",
+            "", "![Baseline and refined F1 for IDA and three Ghidra releases](evaluation/figures/base64-version-comparison.png)",
+            "", "The direct comparison of IDA 9.4 and Ghidra 12.2 covers the four demo builds. "
+            "The full report compares the corpus results with Tables 4 and 9 of the paper and gives "
+            "precision, recall, byte counts, and reproduction commands. "
+            "[Evaluation report](evaluation/REPORT.md) · [Authors’ evaluation code](https://github.com/gdjs2/NSDA) · "
+            "[Coreutils dataset](https://github.com/gdjs2/NSDA-coreutils-dataset)"]
     readme = HERE.parent / "README.md"
     before, marker, rest = readme.read_text(encoding="utf-8").partition("<!-- benchmark:start -->")
     _, end_marker, after_text = rest.partition("<!-- benchmark:end -->")
