@@ -1,0 +1,96 @@
+{
+  "sha256": "29d638844d8ee5e3a86ae302945fb42784e51c8a9fe58d49359f3d6f745b0b87",
+  "ida_version": [
+    9,
+    4,
+    260714
+  ],
+  "dispatch": "0x15c74",
+  "recognized": true,
+  "table": "0x15c7c",
+  "cases": [
+    [
+      [
+        8
+      ],
+      "0x15ca4"
+    ],
+    [
+      [
+        0
+      ],
+      "0x15cf0"
+    ],
+    [
+      [
+        9
+      ],
+      "0x15d10"
+    ],
+    [
+      [
+        1
+      ],
+      "0x15d68"
+    ],
+    [
+      [
+        2
+      ],
+      "0x15d84"
+    ],
+    [
+      [
+        3
+      ],
+      "0x15da8"
+    ],
+    [
+      [
+        4
+      ],
+      "0x15dd4"
+    ],
+    [
+      [
+        5
+      ],
+      "0x15e04"
+    ],
+    [
+      [
+        6
+      ],
+      "0x15e3c"
+    ],
+    [
+      [
+        7
+      ],
+      "0x15e7c"
+    ]
+  ],
+  "paper_targets": [
+    {
+      "index": 1,
+      "slot": "0x15c80",
+      "target": "0x15d68",
+      "code_head": true,
+      "xref_from_dispatch": true
+    },
+    {
+      "index": 2,
+      "slot": "0x15c84",
+      "target": "0x15d84",
+      "code_head": true,
+      "xref_from_dispatch": true
+    },
+    {
+      "index": 3,
+      "slot": "0x15c88",
+      "target": "0x15da8",
+      "code_head": true,
+      "xref_from_dispatch": true
+    }
+  ]
+}

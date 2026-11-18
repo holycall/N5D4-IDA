@@ -1,0 +1,79 @@
+{
+  "binary": "sha256sum",
+  "sha256": "1e322c1efe5b6078d304d61a9c3394ebd881c1203a0d44bcab81f9d8a8bfce05",
+  "labels_sha256": "ef15e8bad840d09cd1c021b7c9c3c8ccec6bbfda968fa685b37429b1f29784cf",
+  "ida_version": [
+    9,
+    4,
+    260714
+  ],
+  "ida_to_label_delta": 0,
+  "positive_words": 9183,
+  "matching_code_words": 9183,
+  "baseline": {
+    "bytes": {
+      "tp": 36732,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "artifact_probes": {
+      "tp": 9183,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  },
+  "refined": {
+    "bytes": {
+      "tp": 36732,
+      "fp": 40,
+      "fn": 0,
+      "precision": 0.998912215816382,
+      "recall": 1.0,
+      "f1": 0.9994558119286026
+    },
+    "artifact_probes": {
+      "tp": 9183,
+      "fp": 10,
+      "fn": 0,
+      "precision": 0.998912215816382,
+      "recall": 1.0,
+      "f1": 0.9994558119286026
+    }
+  },
+  "applied_blocks": 4,
+  "messages": [
+    "Pass 1: 1586 blocks, 114 eligible.",
+    "Pass 1: cpu, 500 epochs, loss 0.3866, 3 candidates at or above threshold.",
+    "Pass 1: 3 blocks converted.",
+    "Pass 2: 1585 blocks, 111 eligible.",
+    "Pass 2: cpu, 500 epochs, loss 0.3680, 1 candidates at or above threshold.",
+    "Pass 2: 1 blocks converted.",
+    "Pass 3: 1584 blocks, 110 eligible.",
+    "Pass 3: cpu, 500 epochs, loss 0.3566, 0 candidates at or above threshold.",
+    "Pass 3: 0 blocks converted."
+  ],
+  "initial_analysis_seconds": 1.11,
+  "refinement_seconds": 40.257,
+  "run_signature": {
+    "implementation_sha256": "0c6ec549ebf12f307b66e47c78c11ff5de22ec2022a0073c90c4efbf0a4c2f6d",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "base": 0,
+    "limits": {
+      "iteration_limit": 5,
+      "epoches_limit": 500,
+      "keep_ghidra_prj": false,
+      "keep_ghidra_prj_path": "./saved_ghidra_prjs",
+      "legacy": true
+    },
+    "binary_sha256": "1e322c1efe5b6078d304d61a9c3394ebd881c1203a0d44bcab81f9d8a8bfce05",
+    "csv_sha256": "ef15e8bad840d09cd1c021b7c9c3c8ccec6bbfda968fa685b37429b1f29784cf"
+  },
+  "build": "arm32-llvm",
+  "artifact_config": "main.toml"
+}

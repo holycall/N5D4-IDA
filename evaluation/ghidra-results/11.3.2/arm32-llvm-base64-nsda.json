@@ -1,0 +1,19 @@
+{
+  "build": "arm32-llvm",
+  "binary": "base64",
+  "evaluator": "nsda",
+  "ghidra": "11.3.2",
+  "seed": 42,
+  "sha256": "64378d79865ca031d86043f1efac566a4bb1634a8fe7f8495857f001e82312a6",
+  "python": "3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)]",
+  "pyghidra": "2.2.0",
+  "torch": "2.15.0+cpu",
+  "ltntorch": "1.0.2",
+  "precision": 0.9876828329484219,
+  "recall": 0.9973569651741293,
+  "f1": 0.9924963255202289,
+  "preprocessing_seconds": 33.987431,
+  "training_seconds": 53.195406999999996,
+  "postprocessing_seconds": 6.26124,
+  "wall_seconds": 93.6504728999571
+}

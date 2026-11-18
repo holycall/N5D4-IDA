@@ -1,0 +1,76 @@
+{
+  "binary": "uname",
+  "sha256": "76d64ca3ebd39b25a67e33e7023b7d935ad12a75d8ae1b26c8cf5a54d2f423de",
+  "labels_sha256": "8ca92dd5f513a1b0b05eb2b503ae37cf6d5312ff0a91ed593cf8f8c008effe4e",
+  "ida_version": [
+    9,
+    4,
+    260714
+  ],
+  "ida_to_label_delta": 0,
+  "positive_words": 6784,
+  "matching_code_words": 6784,
+  "baseline": {
+    "bytes": {
+      "tp": 27016,
+      "fp": 0,
+      "fn": 120,
+      "precision": 1.0,
+      "recall": 0.9955778301886793,
+      "f1": 0.9977840153641602
+    },
+    "artifact_probes": {
+      "tp": 6754,
+      "fp": 0,
+      "fn": 30,
+      "precision": 1.0,
+      "recall": 0.9955778301886793,
+      "f1": 0.9977840153641602
+    }
+  },
+  "refined": {
+    "bytes": {
+      "tp": 27016,
+      "fp": 8,
+      "fn": 120,
+      "precision": 0.9997039668442865,
+      "recall": 0.9955778301886793,
+      "f1": 0.9976366322008863
+    },
+    "artifact_probes": {
+      "tp": 6754,
+      "fp": 2,
+      "fn": 30,
+      "precision": 0.9997039668442865,
+      "recall": 0.9955778301886793,
+      "f1": 0.9976366322008863
+    }
+  },
+  "applied_blocks": 1,
+  "messages": [
+    "Pass 1: 1501 blocks, 100 eligible.",
+    "Pass 1: cpu, 500 epochs, loss 0.4091, 1 candidates at or above threshold.",
+    "Pass 1: 1 blocks converted.",
+    "Pass 2: 1501 blocks, 99 eligible.",
+    "Pass 2: cpu, 500 epochs, loss 0.3947, 0 candidates at or above threshold.",
+    "Pass 2: 0 blocks converted."
+  ],
+  "initial_analysis_seconds": 1.562,
+  "refinement_seconds": 41.215,
+  "run_signature": {
+    "implementation_sha256": "0c6ec549ebf12f307b66e47c78c11ff5de22ec2022a0073c90c4efbf0a4c2f6d",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "base": 0,
+    "limits": {
+      "iteration_limit": 5,
+      "epoches_limit": 500,
+      "keep_ghidra_prj": false,
+      "keep_ghidra_prj_path": "./saved_ghidra_prjs",
+      "legacy": true
+    },
+    "binary_sha256": "76d64ca3ebd39b25a67e33e7023b7d935ad12a75d8ae1b26c8cf5a54d2f423de",
+    "csv_sha256": "8ca92dd5f513a1b0b05eb2b503ae37cf6d5312ff0a91ed593cf8f8c008effe4e"
+  },
+  "build": "mips-llvm",
+  "artifact_config": "main.toml"
+}

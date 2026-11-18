@@ -1,0 +1,79 @@
+{
+  "binary": "cut",
+  "sha256": "9e78806a2a6de5733c0aa3b0e2e643c0a64845c282ee4a3cc1c9f974abb4bf1d",
+  "labels_sha256": "268331c690cf4c35bd3f2e713a6d1318f04c116d485da25db7bfe8b1c4c04e44",
+  "ida_version": [
+    9,
+    4,
+    260714
+  ],
+  "ida_to_label_delta": 0,
+  "positive_words": 9608,
+  "matching_code_words": 9608,
+  "baseline": {
+    "bytes": {
+      "tp": 38212,
+      "fp": 0,
+      "fn": 220,
+      "precision": 1.0,
+      "recall": 0.9942756036636137,
+      "f1": 0.9971295861385105
+    },
+    "artifact_probes": {
+      "tp": 9553,
+      "fp": 0,
+      "fn": 55,
+      "precision": 1.0,
+      "recall": 0.9942756036636137,
+      "f1": 0.9971295861385105
+    }
+  },
+  "refined": {
+    "bytes": {
+      "tp": 38212,
+      "fp": 52,
+      "fn": 220,
+      "precision": 0.9986410202801589,
+      "recall": 0.9942756036636137,
+      "f1": 0.9964535308229895
+    },
+    "artifact_probes": {
+      "tp": 9553,
+      "fp": 13,
+      "fn": 55,
+      "precision": 0.9986410202801589,
+      "recall": 0.9942756036636137,
+      "f1": 0.9964535308229895
+    }
+  },
+  "applied_blocks": 2,
+  "messages": [
+    "Pass 1: 2398 blocks, 152 eligible.",
+    "Pass 1: cpu, 500 epochs, loss 0.4064, 1 candidates at or above threshold.",
+    "Pass 1: 1 blocks converted.",
+    "Pass 2: 2398 blocks, 151 eligible.",
+    "Pass 2: cpu, 500 epochs, loss 0.3945, 1 candidates at or above threshold.",
+    "Pass 2: 1 blocks converted.",
+    "Pass 3: 2398 blocks, 150 eligible.",
+    "Pass 3: cpu, 500 epochs, loss 0.3923, 0 candidates at or above threshold.",
+    "Pass 3: 0 blocks converted."
+  ],
+  "initial_analysis_seconds": 1.517,
+  "refinement_seconds": 32.344,
+  "run_signature": {
+    "implementation_sha256": "0c6ec549ebf12f307b66e47c78c11ff5de22ec2022a0073c90c4efbf0a4c2f6d",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "base": 4194304,
+    "limits": {
+      "iteration_limit": 5,
+      "epoches_limit": 500,
+      "keep_ghidra_prj": false,
+      "keep_ghidra_prj_path": "./saved_ghidra_prjs",
+      "legacy": true
+    },
+    "binary_sha256": "9e78806a2a6de5733c0aa3b0e2e643c0a64845c282ee4a3cc1c9f974abb4bf1d",
+    "csv_sha256": "268331c690cf4c35bd3f2e713a6d1318f04c116d485da25db7bfe8b1c4c04e44"
+  },
+  "build": "mips-gcc",
+  "artifact_config": "main.toml"
+}

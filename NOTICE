@@ -1,0 +1,24 @@
+N5D4 for IDA Pro
+
+This is an independent IDA Pro port of N5D4, the Ghidra implementation of
+Neurosymbolic Disassembly by Zhaoqi Xiao.
+
+Original project: https://github.com/gdjs2/N5D4
+Source revision: 4550b15f7332398e1a9a68622f4efdee9a80fccb
+Original N5D4 copyright: Copyright 2026 Zhaoqi Xiao
+Original license: BSD 3-Clause. The full notice and disclaimer are in LICENSE.
+
+Port-specific work includes IDAPython block extraction, feature mapping,
+control-flow analysis, preview and undoable IDB updates, an external training
+worker, and IDA benchmarking.
+
+Research paper: Zhaoqi Xiao, Yeqi Fu, Lambang Akbar Wijayadi, Zhenkai Liang,
+and Heng Yin. Neurosymbolic Disassembly. ACM CCS 2026.
+https://doi.org/10.1145/3830454.3832592
+
+Evaluation configuration and original Ghidra evaluators:
+https://github.com/gdjs2/NSDA/tree/21814efab2155dab48c74eb06e43deb6b24a4970
+Prebuilt GNU Coreutils binaries and ground-truth labels:
+https://github.com/gdjs2/NSDA-coreutils-dataset/tree/9962bca2c5073e4ddac09a7941479f526597c36d
+Those repositories retain their own notices. The benchmark report identifies
+measurements produced by this port and values reported by the paper's authors.

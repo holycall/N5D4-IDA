@@ -1,0 +1,76 @@
+{
+  "binary": "tac",
+  "sha256": "232180c5d95aae4bbc623a3d73d0a8d3ae4d5acaf5698326d56699997596804c",
+  "labels_sha256": "752d91200f18afa7f876b9513b2514182b218d97ca773316443446127bed83e7",
+  "ida_version": [
+    9,
+    4,
+    260714
+  ],
+  "ida_to_label_delta": 0,
+  "positive_words": 19478,
+  "matching_code_words": 19478,
+  "baseline": {
+    "bytes": {
+      "tp": 77912,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "artifact_probes": {
+      "tp": 19478,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  },
+  "refined": {
+    "bytes": {
+      "tp": 77912,
+      "fp": 16,
+      "fn": 0,
+      "precision": 0.9997946822708141,
+      "recall": 1.0,
+      "f1": 0.9998973305954826
+    },
+    "artifact_probes": {
+      "tp": 19478,
+      "fp": 4,
+      "fn": 0,
+      "precision": 0.9997946822708141,
+      "recall": 1.0,
+      "f1": 0.9998973305954826
+    }
+  },
+  "applied_blocks": 2,
+  "messages": [
+    "Pass 1: 4633 blocks, 109 eligible.",
+    "Pass 1: cpu, 500 epochs, loss 0.3856, 2 candidates at or above threshold.",
+    "Pass 1: 2 blocks converted.",
+    "Pass 2: 4633 blocks, 107 eligible.",
+    "Pass 2: cpu, 500 epochs, loss 0.3746, 0 candidates at or above threshold.",
+    "Pass 2: 0 blocks converted."
+  ],
+  "initial_analysis_seconds": 2.312,
+  "refinement_seconds": 47.188,
+  "run_signature": {
+    "implementation_sha256": "0c6ec549ebf12f307b66e47c78c11ff5de22ec2022a0073c90c4efbf0a4c2f6d",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "base": 65536,
+    "limits": {
+      "iteration_limit": 5,
+      "epoches_limit": 500,
+      "keep_ghidra_prj": false,
+      "keep_ghidra_prj_path": "./saved_ghidra_prjs",
+      "legacy": true
+    },
+    "binary_sha256": "232180c5d95aae4bbc623a3d73d0a8d3ae4d5acaf5698326d56699997596804c",
+    "csv_sha256": "752d91200f18afa7f876b9513b2514182b218d97ca773316443446127bed83e7"
+  },
+  "build": "arm32-gcc",
+  "artifact_config": "main.toml"
+}

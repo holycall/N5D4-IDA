@@ -1,0 +1,7 @@
+{
+  "IDAMetadataDescriptorVersion": 1,
+  "plugin": {
+    "name": "N5D4 disassembly refinement",
+    "entryPoint": "N5D4.py"
+  }
+}

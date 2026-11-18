@@ -1,0 +1,76 @@
+{
+  "binary": "cksum",
+  "sha256": "c0f42c6d54c728634e2b9a4d471d9c1f3f0425666fddef7f7fb6d3e2e335f90e",
+  "labels_sha256": "fdf9a2a2bb89fe2922e9201491073992f5195a44276b13dfc279f795a96d4d06",
+  "ida_version": [
+    9,
+    4,
+    260714
+  ],
+  "ida_to_label_delta": 0,
+  "positive_words": 37563,
+  "matching_code_words": 37563,
+  "baseline": {
+    "bytes": {
+      "tp": 150252,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "artifact_probes": {
+      "tp": 37563,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  },
+  "refined": {
+    "bytes": {
+      "tp": 150252,
+      "fp": 24,
+      "fn": 0,
+      "precision": 0.9998402938592988,
+      "recall": 1.0,
+      "f1": 0.9999201405526273
+    },
+    "artifact_probes": {
+      "tp": 37563,
+      "fp": 6,
+      "fn": 0,
+      "precision": 0.9998402938592988,
+      "recall": 1.0,
+      "f1": 0.9999201405526273
+    }
+  },
+  "applied_blocks": 2,
+  "messages": [
+    "Pass 1: 3634 blocks, 208 eligible.",
+    "Pass 1: cpu, 500 epochs, loss 0.3963, 2 candidates at or above threshold.",
+    "Pass 1: 2 blocks converted.",
+    "Pass 2: 3633 blocks, 206 eligible.",
+    "Pass 2: cpu, 500 epochs, loss 0.3852, 0 candidates at or above threshold.",
+    "Pass 2: 0 blocks converted."
+  ],
+  "initial_analysis_seconds": 2.644,
+  "refinement_seconds": 26.167,
+  "run_signature": {
+    "implementation_sha256": "0c6ec549ebf12f307b66e47c78c11ff5de22ec2022a0073c90c4efbf0a4c2f6d",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "base": 0,
+    "limits": {
+      "iteration_limit": 5,
+      "epoches_limit": 500,
+      "keep_ghidra_prj": false,
+      "keep_ghidra_prj_path": "./saved_ghidra_prjs",
+      "legacy": true
+    },
+    "binary_sha256": "c0f42c6d54c728634e2b9a4d471d9c1f3f0425666fddef7f7fb6d3e2e335f90e",
+    "csv_sha256": "fdf9a2a2bb89fe2922e9201491073992f5195a44276b13dfc279f795a96d4d06"
+  },
+  "build": "arm32-llvm",
+  "artifact_config": "main.toml"
+}

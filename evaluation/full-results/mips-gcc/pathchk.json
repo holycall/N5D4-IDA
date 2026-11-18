@@ -1,0 +1,76 @@
+{
+  "binary": "pathchk",
+  "sha256": "f1dab25d6f024b7238da9c983d7cf29e5a3dbf5514e558d49fbbba5873866873",
+  "labels_sha256": "aa5c8acd4082b2b220c38d52944c39de78e0df103028efbcc1cf1ad8860e21b0",
+  "ida_version": [
+    9,
+    4,
+    260714
+  ],
+  "ida_to_label_delta": 0,
+  "positive_words": 7080,
+  "matching_code_words": 7080,
+  "baseline": {
+    "bytes": {
+      "tp": 28156,
+      "fp": 0,
+      "fn": 164,
+      "precision": 1.0,
+      "recall": 0.9942090395480226,
+      "f1": 0.9970961116226361
+    },
+    "artifact_probes": {
+      "tp": 7039,
+      "fp": 0,
+      "fn": 41,
+      "precision": 1.0,
+      "recall": 0.9942090395480226,
+      "f1": 0.9970961116226361
+    }
+  },
+  "refined": {
+    "bytes": {
+      "tp": 28156,
+      "fp": 36,
+      "fn": 164,
+      "precision": 0.9987230419977299,
+      "recall": 0.9942090395480226,
+      "f1": 0.9964609286523216
+    },
+    "artifact_probes": {
+      "tp": 7039,
+      "fp": 9,
+      "fn": 41,
+      "precision": 0.9987230419977299,
+      "recall": 0.9942090395480226,
+      "f1": 0.9964609286523216
+    }
+  },
+  "applied_blocks": 1,
+  "messages": [
+    "Pass 1: 1723 blocks, 116 eligible.",
+    "Pass 1: cpu, 500 epochs, loss 0.4020, 1 candidates at or above threshold.",
+    "Pass 1: 1 blocks converted.",
+    "Pass 2: 1723 blocks, 115 eligible.",
+    "Pass 2: cpu, 500 epochs, loss 0.3893, 0 candidates at or above threshold.",
+    "Pass 2: 0 blocks converted."
+  ],
+  "initial_analysis_seconds": 1.673,
+  "refinement_seconds": 23.746,
+  "run_signature": {
+    "implementation_sha256": "0c6ec549ebf12f307b66e47c78c11ff5de22ec2022a0073c90c4efbf0a4c2f6d",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "base": 4194304,
+    "limits": {
+      "iteration_limit": 5,
+      "epoches_limit": 500,
+      "keep_ghidra_prj": false,
+      "keep_ghidra_prj_path": "./saved_ghidra_prjs",
+      "legacy": true
+    },
+    "binary_sha256": "f1dab25d6f024b7238da9c983d7cf29e5a3dbf5514e558d49fbbba5873866873",
+    "csv_sha256": "aa5c8acd4082b2b220c38d52944c39de78e0df103028efbcc1cf1ad8860e21b0"
+  },
+  "build": "mips-gcc",
+  "artifact_config": "main.toml"
+}

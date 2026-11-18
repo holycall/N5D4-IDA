@@ -1,0 +1,59 @@
+{
+  "binary": "base64",
+  "sha256": "feb1cf442bc592035c8c7e6b955d3836fd8b7b87ef655ecad91d4ea130b7fb7f",
+  "labels_sha256": "560ef7d1c7f4ec39d2cbf8d74ea528888891319688bcc4896c2842ed8c0dfffd",
+  "ida_version": [
+    9,
+    4,
+    260714
+  ],
+  "ida_to_label_delta": 0,
+  "positive_words": 9668,
+  "matching_code_words": 9668,
+  "baseline": {
+    "bytes": {
+      "tp": 38508,
+      "fp": 0,
+      "fn": 164,
+      "precision": 1.0,
+      "recall": 0.9957592056268101,
+      "f1": 0.9978750971754341
+    },
+    "artifact_probes": {
+      "tp": 9627,
+      "fp": 0,
+      "fn": 41,
+      "precision": 1.0,
+      "recall": 0.9957592056268101,
+      "f1": 0.9978750971754341
+    }
+  },
+  "refined": {
+    "bytes": {
+      "tp": 38508,
+      "fp": 0,
+      "fn": 164,
+      "precision": 1.0,
+      "recall": 0.9957592056268101,
+      "f1": 0.9978750971754341
+    },
+    "artifact_probes": {
+      "tp": 9627,
+      "fp": 0,
+      "fn": 41,
+      "precision": 1.0,
+      "recall": 0.9957592056268101,
+      "f1": 0.9978750971754341
+    }
+  },
+  "applied_blocks": 0,
+  "messages": [
+    "Pass 1: 1882 blocks, 122 eligible.",
+    "Pass 1: cpu, 500 epochs, loss 0.4054, 0 candidates at or above threshold.",
+    "Pass 1: 0 blocks converted."
+  ],
+  "initial_analysis_seconds": 1.584,
+  "refinement_seconds": 14.208,
+  "build": "mips-llvm",
+  "artifact_config": "demo.toml"
+}

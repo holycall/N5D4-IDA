@@ -1,0 +1,19 @@
+{
+  "build": "mips-llvm",
+  "binary": "base64",
+  "evaluator": "ghidra",
+  "ghidra": "12.2",
+  "seed": 42,
+  "sha256": "feb1cf442bc592035c8c7e6b955d3836fd8b7b87ef655ecad91d4ea130b7fb7f",
+  "python": "3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)]",
+  "pyghidra": "3.2.0",
+  "torch": "2.15.0+cpu",
+  "ltntorch": "1.0.2",
+  "precision": 1.0,
+  "recall": 0.5841952834091849,
+  "f1": 0.7375293810394359,
+  "preprocessing_seconds": 4.475277,
+  "training_seconds": 0.0,
+  "postprocessing_seconds": 0.0,
+  "wall_seconds": 5.398098699981347
+}

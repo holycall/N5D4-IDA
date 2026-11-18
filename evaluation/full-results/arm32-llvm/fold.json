@@ -1,0 +1,76 @@
+{
+  "binary": "fold",
+  "sha256": "45f4b398cabd8c36cbfc28eae1398656a140404463e73b6106a39fe41071c239",
+  "labels_sha256": "223e7bf2060048857ede84f289c71993ae289e23c67619e38e0be214c572249d",
+  "ida_version": [
+    9,
+    4,
+    260714
+  ],
+  "ida_to_label_delta": 0,
+  "positive_words": 6182,
+  "matching_code_words": 6182,
+  "baseline": {
+    "bytes": {
+      "tp": 24728,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "artifact_probes": {
+      "tp": 6182,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  },
+  "refined": {
+    "bytes": {
+      "tp": 24728,
+      "fp": 16,
+      "fn": 0,
+      "precision": 0.9993533785968316,
+      "recall": 1.0,
+      "f1": 0.9996765847347995
+    },
+    "artifact_probes": {
+      "tp": 6182,
+      "fp": 4,
+      "fn": 0,
+      "precision": 0.9993533785968316,
+      "recall": 1.0,
+      "f1": 0.9996765847347995
+    }
+  },
+  "applied_blocks": 1,
+  "messages": [
+    "Pass 1: 1359 blocks, 104 eligible.",
+    "Pass 1: cpu, 500 epochs, loss 0.3652, 1 candidates at or above threshold.",
+    "Pass 1: 1 blocks converted.",
+    "Pass 2: 1358 blocks, 103 eligible.",
+    "Pass 2: cpu, 500 epochs, loss 0.3509, 0 candidates at or above threshold.",
+    "Pass 2: 0 blocks converted."
+  ],
+  "initial_analysis_seconds": 1.492,
+  "refinement_seconds": 23.239,
+  "run_signature": {
+    "implementation_sha256": "0c6ec549ebf12f307b66e47c78c11ff5de22ec2022a0073c90c4efbf0a4c2f6d",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "base": 0,
+    "limits": {
+      "iteration_limit": 5,
+      "epoches_limit": 500,
+      "keep_ghidra_prj": false,
+      "keep_ghidra_prj_path": "./saved_ghidra_prjs",
+      "legacy": true
+    },
+    "binary_sha256": "45f4b398cabd8c36cbfc28eae1398656a140404463e73b6106a39fe41071c239",
+    "csv_sha256": "223e7bf2060048857ede84f289c71993ae289e23c67619e38e0be214c572249d"
+  },
+  "build": "arm32-llvm",
+  "artifact_config": "main.toml"
+}

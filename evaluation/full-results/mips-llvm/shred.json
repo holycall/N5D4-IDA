@@ -1,0 +1,73 @@
+{
+  "binary": "shred",
+  "sha256": "fe4acce5b938d82863c1ca57224ca211b2bc350cb85f2836d0389f46e64fdcc2",
+  "labels_sha256": "c963bff0c973c7e7621880d8d185c0da7312e934af2e4db0b82f1d3a5929c4c8",
+  "ida_version": [
+    9,
+    4,
+    260714
+  ],
+  "ida_to_label_delta": 0,
+  "positive_words": 13872,
+  "matching_code_words": 13872,
+  "baseline": {
+    "bytes": {
+      "tp": 55256,
+      "fp": 0,
+      "fn": 232,
+      "precision": 1.0,
+      "recall": 0.9958189158016147,
+      "f1": 0.9979050783789641
+    },
+    "artifact_probes": {
+      "tp": 13814,
+      "fp": 0,
+      "fn": 58,
+      "precision": 1.0,
+      "recall": 0.9958189158016147,
+      "f1": 0.9979050783789641
+    }
+  },
+  "refined": {
+    "bytes": {
+      "tp": 55256,
+      "fp": 0,
+      "fn": 232,
+      "precision": 1.0,
+      "recall": 0.9958189158016147,
+      "f1": 0.9979050783789641
+    },
+    "artifact_probes": {
+      "tp": 13814,
+      "fp": 0,
+      "fn": 58,
+      "precision": 1.0,
+      "recall": 0.9958189158016147,
+      "f1": 0.9979050783789641
+    }
+  },
+  "applied_blocks": 0,
+  "messages": [
+    "Pass 1: 2717 blocks, 172 eligible.",
+    "Pass 1: cpu, 500 epochs, loss 0.3988, 0 candidates at or above threshold.",
+    "Pass 1: 0 blocks converted."
+  ],
+  "initial_analysis_seconds": 2.221,
+  "refinement_seconds": 10.898,
+  "run_signature": {
+    "implementation_sha256": "0c6ec549ebf12f307b66e47c78c11ff5de22ec2022a0073c90c4efbf0a4c2f6d",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "base": 0,
+    "limits": {
+      "iteration_limit": 5,
+      "epoches_limit": 500,
+      "keep_ghidra_prj": false,
+      "keep_ghidra_prj_path": "./saved_ghidra_prjs",
+      "legacy": true
+    },
+    "binary_sha256": "fe4acce5b938d82863c1ca57224ca211b2bc350cb85f2836d0389f46e64fdcc2",
+    "csv_sha256": "c963bff0c973c7e7621880d8d185c0da7312e934af2e4db0b82f1d3a5929c4c8"
+  },
+  "build": "mips-llvm",
+  "artifact_config": "main.toml"
+}

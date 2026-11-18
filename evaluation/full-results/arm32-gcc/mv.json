@@ -1,0 +1,76 @@
+{
+  "binary": "mv",
+  "sha256": "671d6f56c954b299f7bb37b6b6a6cd32e275e6854251ffc7bf0e35aab4ee8962",
+  "labels_sha256": "c5aa94ec8267eb2691068bcc0494a0f865e17045f733c3a382eb01a96a121262",
+  "ida_version": [
+    9,
+    4,
+    260714
+  ],
+  "ida_to_label_delta": 0,
+  "positive_words": 21823,
+  "matching_code_words": 21823,
+  "baseline": {
+    "bytes": {
+      "tp": 87260,
+      "fp": 0,
+      "fn": 32,
+      "precision": 1.0,
+      "recall": 0.9996334142876782,
+      "f1": 0.9998166735414089
+    },
+    "artifact_probes": {
+      "tp": 21815,
+      "fp": 0,
+      "fn": 8,
+      "precision": 1.0,
+      "recall": 0.9996334142876782,
+      "f1": 0.9998166735414089
+    }
+  },
+  "refined": {
+    "bytes": {
+      "tp": 87272,
+      "fp": 20,
+      "fn": 20,
+      "precision": 0.9997708839297988,
+      "recall": 0.9997708839297988,
+      "f1": 0.9997708839297988
+    },
+    "artifact_probes": {
+      "tp": 21818,
+      "fp": 5,
+      "fn": 5,
+      "precision": 0.9997708839297988,
+      "recall": 0.9997708839297988,
+      "f1": 0.9997708839297988
+    }
+  },
+  "applied_blocks": 4,
+  "messages": [
+    "Pass 1: 5569 blocks, 141 eligible.",
+    "Pass 1: cpu, 500 epochs, loss 0.3955, 4 candidates at or above threshold.",
+    "Pass 1: 4 blocks converted.",
+    "Pass 2: 5568 blocks, 137 eligible.",
+    "Pass 2: cpu, 500 epochs, loss 0.3858, 0 candidates at or above threshold.",
+    "Pass 2: 0 blocks converted."
+  ],
+  "initial_analysis_seconds": 2.961,
+  "refinement_seconds": 34.996,
+  "run_signature": {
+    "implementation_sha256": "0c6ec549ebf12f307b66e47c78c11ff5de22ec2022a0073c90c4efbf0a4c2f6d",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "base": 65536,
+    "limits": {
+      "iteration_limit": 5,
+      "epoches_limit": 500,
+      "keep_ghidra_prj": false,
+      "keep_ghidra_prj_path": "./saved_ghidra_prjs",
+      "legacy": true
+    },
+    "binary_sha256": "671d6f56c954b299f7bb37b6b6a6cd32e275e6854251ffc7bf0e35aab4ee8962",
+    "csv_sha256": "c5aa94ec8267eb2691068bcc0494a0f865e17045f733c3a382eb01a96a121262"
+  },
+  "build": "arm32-gcc",
+  "artifact_config": "main.toml"
+}

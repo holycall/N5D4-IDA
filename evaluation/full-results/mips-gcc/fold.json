@@ -1,0 +1,76 @@
+{
+  "binary": "fold",
+  "sha256": "9eb4667bb423bca50179783d1fc2b86b28550db0fefbad31cee7dc07b393b263",
+  "labels_sha256": "e017b2bf2fd2505c9bf1b018b6dad82049f2e1864b847c5589b5e1b2771a9672",
+  "ida_version": [
+    9,
+    4,
+    260714
+  ],
+  "ida_to_label_delta": 0,
+  "positive_words": 8840,
+  "matching_code_words": 8840,
+  "baseline": {
+    "bytes": {
+      "tp": 35156,
+      "fp": 0,
+      "fn": 204,
+      "precision": 1.0,
+      "recall": 0.9942307692307693,
+      "f1": 0.9971070395371263
+    },
+    "artifact_probes": {
+      "tp": 8789,
+      "fp": 0,
+      "fn": 51,
+      "precision": 1.0,
+      "recall": 0.9942307692307693,
+      "f1": 0.9971070395371263
+    }
+  },
+  "refined": {
+    "bytes": {
+      "tp": 35156,
+      "fp": 36,
+      "fn": 204,
+      "precision": 0.9989770402364173,
+      "recall": 0.9942307692307693,
+      "f1": 0.9965982537702688
+    },
+    "artifact_probes": {
+      "tp": 8789,
+      "fp": 9,
+      "fn": 51,
+      "precision": 0.9989770402364173,
+      "recall": 0.9942307692307693,
+      "f1": 0.9965982537702688
+    }
+  },
+  "applied_blocks": 1,
+  "messages": [
+    "Pass 1: 2131 blocks, 141 eligible.",
+    "Pass 1: cpu, 500 epochs, loss 0.4031, 1 candidates at or above threshold.",
+    "Pass 1: 1 blocks converted.",
+    "Pass 2: 2131 blocks, 140 eligible.",
+    "Pass 2: cpu, 500 epochs, loss 0.3914, 0 candidates at or above threshold.",
+    "Pass 2: 0 blocks converted."
+  ],
+  "initial_analysis_seconds": 2.25,
+  "refinement_seconds": 28.115,
+  "run_signature": {
+    "implementation_sha256": "0c6ec549ebf12f307b66e47c78c11ff5de22ec2022a0073c90c4efbf0a4c2f6d",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "base": 4194304,
+    "limits": {
+      "iteration_limit": 5,
+      "epoches_limit": 500,
+      "keep_ghidra_prj": false,
+      "keep_ghidra_prj_path": "./saved_ghidra_prjs",
+      "legacy": true
+    },
+    "binary_sha256": "9eb4667bb423bca50179783d1fc2b86b28550db0fefbad31cee7dc07b393b263",
+    "csv_sha256": "e017b2bf2fd2505c9bf1b018b6dad82049f2e1864b847c5589b5e1b2771a9672"
+  },
+  "build": "mips-gcc",
+  "artifact_config": "main.toml"
+}

@@ -1,0 +1,62 @@
+{
+  "binary": "base64",
+  "sha256": "64378d79865ca031d86043f1efac566a4bb1634a8fe7f8495857f001e82312a6",
+  "labels_sha256": "fe65525f20dc7fba8bef7d9d8c5617596ebe2b497b7a1c8ee12c1b90a57eaf2a",
+  "ida_version": [
+    9,
+    4,
+    260714
+  ],
+  "ida_to_label_delta": 0,
+  "positive_words": 6431,
+  "matching_code_words": 6431,
+  "baseline": {
+    "bytes": {
+      "tp": 25724,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "artifact_probes": {
+      "tp": 6431,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  },
+  "refined": {
+    "bytes": {
+      "tp": 25724,
+      "fp": 20,
+      "fn": 0,
+      "precision": 0.9992231199502797,
+      "recall": 1.0,
+      "f1": 0.9996114090308541
+    },
+    "artifact_probes": {
+      "tp": 6431,
+      "fp": 5,
+      "fn": 0,
+      "precision": 0.9992231199502797,
+      "recall": 1.0,
+      "f1": 0.9996114090308541
+    }
+  },
+  "applied_blocks": 2,
+  "messages": [
+    "Pass 1: 1437 blocks, 104 eligible.",
+    "Pass 1: cpu, 500 epochs, loss 0.3691, 2 candidates at or above threshold.",
+    "Pass 1: 2 blocks converted.",
+    "Pass 2: 1436 blocks, 102 eligible.",
+    "Pass 2: cpu, 500 epochs, loss 0.3555, 0 candidates at or above threshold.",
+    "Pass 2: 0 blocks converted."
+  ],
+  "initial_analysis_seconds": 1.153,
+  "refinement_seconds": 26.209,
+  "build": "arm32-llvm",
+  "artifact_config": "demo.toml"
+}

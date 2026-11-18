@@ -1,0 +1,76 @@
+{
+  "binary": "shuf",
+  "sha256": "4ebaaab7a8bc267696a52f2ac5aac1e399571103721ac58bb304f99f0a2a58d3",
+  "labels_sha256": "9fefb56f50aa36970fbffc476ba3f5bc567d3bdc3a4b8d680c0b3b780a726b8a",
+  "ida_version": [
+    9,
+    4,
+    260714
+  ],
+  "ida_to_label_delta": 0,
+  "positive_words": 10193,
+  "matching_code_words": 10193,
+  "baseline": {
+    "bytes": {
+      "tp": 40772,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "artifact_probes": {
+      "tp": 10193,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  },
+  "refined": {
+    "bytes": {
+      "tp": 40772,
+      "fp": 48,
+      "fn": 0,
+      "precision": 0.9988241058304752,
+      "recall": 1.0,
+      "f1": 0.999411707030101
+    },
+    "artifact_probes": {
+      "tp": 10193,
+      "fp": 12,
+      "fn": 0,
+      "precision": 0.9988241058304752,
+      "recall": 1.0,
+      "f1": 0.999411707030101
+    }
+  },
+  "applied_blocks": 2,
+  "messages": [
+    "Pass 1: 2319 blocks, 110 eligible.",
+    "Pass 1: cpu, 500 epochs, loss 0.3912, 2 candidates at or above threshold.",
+    "Pass 1: 2 blocks converted.",
+    "Pass 2: 2317 blocks, 108 eligible.",
+    "Pass 2: cpu, 500 epochs, loss 0.3809, 0 candidates at or above threshold.",
+    "Pass 2: 0 blocks converted."
+  ],
+  "initial_analysis_seconds": 1.237,
+  "refinement_seconds": 64.926,
+  "run_signature": {
+    "implementation_sha256": "0c6ec549ebf12f307b66e47c78c11ff5de22ec2022a0073c90c4efbf0a4c2f6d",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "base": 0,
+    "limits": {
+      "iteration_limit": 5,
+      "epoches_limit": 500,
+      "keep_ghidra_prj": false,
+      "keep_ghidra_prj_path": "./saved_ghidra_prjs",
+      "legacy": true
+    },
+    "binary_sha256": "4ebaaab7a8bc267696a52f2ac5aac1e399571103721ac58bb304f99f0a2a58d3",
+    "csv_sha256": "9fefb56f50aa36970fbffc476ba3f5bc567d3bdc3a4b8d680c0b3b780a726b8a"
+  },
+  "build": "arm32-llvm",
+  "artifact_config": "main.toml"
+}
